@@ -61,7 +61,7 @@ C:\Users\VP1050\OneDrive\Documents> docker run --name mysqlserver -p 3300:3306 -
 ```
 
 If using docker desktop, we should see:
-![mysqldocker](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mysqldocker.png){: width="1086" height="542"}
+![mysqldocker](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mysqldocker.png)
 
 
 ### Create Python Client for Mysql Database <a class="anchor" id="sqlclient"></a>
@@ -150,7 +150,7 @@ C:\Users\VP1050\OneDrive\Documents> docker run -p 27017:27017 --name some-mongo 
 
 Within Docker, the container will show as below: 
 
-![mysqlmongo](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mongodocker.png){: width="1086" height="542"}
+![mysqlmongo](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mongodocker.png)
 
 
 ## Setup Web Application Environment
@@ -238,10 +238,10 @@ We run the application by running the previously created **server.py** file.
 C:\Users\VP1050\OneDrive\Documents> python3 server.py
 ```
 The output should show the timestamp and each bus with the accompanying attributes. The insertMBTARecord() function in the [MBTAApiClient.py](#sqlclient) file will save the output to the MySQL database.
-![mysqldocker](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/server_output.png){: width="1086" height="542"}
+![mysqldocker](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/server_output.png)
 
 We can also check for the visual representation of bus location updates by going to localhost:3000 in a web browser.
-![mapbox_output](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mapbox.png){: width="1086" height="542"}
+![mapbox_output](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/mapbox.png)
 
 
 ## Setup Change Data Capture with Debezium
@@ -281,12 +281,12 @@ The java files within *\DebeziumCDC\app\src\main\java\mit\edu\tv\listener* allow
 
 [Download](https://www.mongodb.com/try/download/shell) the Compass client and connect to port 27017. View the changes being populated in the database. 
 
-![Compass_Connection](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/compass_con.png){: width="1086" height="542"}
-![Compass](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/compass.png){: width="1086" height="542"}
+![Compass_Connection](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/compass_con.png)
+![Compass](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/compass.png)
 
 
 ## Conclusion
 
 The flow chart below summarizes the process of capturing data from the MBTA API and propagating that data to a MySQL database and MongoDB database. The project files can be downloaded at ![Github](https://github.com/vinceperkins/airflow-web-scraping-pipeline). 
 
-![Dataflow](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/dataflow.png){: width="1086" height="542"}
+![Dataflow](https://raw.githubusercontent.com/vinceperkins/mbta-transit-data-tracking-web-app/master/posts/20220624/dataflow.png)
